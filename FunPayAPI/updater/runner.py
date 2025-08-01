@@ -176,7 +176,7 @@ class Runner:
         """
         events, lcmc_events = [], []
         self.__last_msg_event_tag = obj.get("tag")
-        parser = BeautifulSoup(obj["data"]["html"], "lxml")
+        parser = BeautifulSoup(obj["data"]["html"], "html.parser")
         chats = parser.find_all("a", {"class": "contact-item"})
 
         # Получаем все изменившиеся чаты
