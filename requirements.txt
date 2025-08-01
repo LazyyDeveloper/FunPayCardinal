@@ -6,4 +6,3 @@ pytelegrambotapi==4.15.2
 pillow>=9.3.0
 requests_toolbelt==0.10.1
 html5lib
-bcrypt>=4.2.0
