@@ -5,5 +5,5 @@ requests==2.28.1
 pytelegrambotapi==4.15.2
 pillow>=9.3.0
 requests_toolbelt==0.10.1
-lxml>=5.3.0
+html5lib
 bcrypt>=4.2.0
