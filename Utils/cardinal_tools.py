@@ -1,7 +1,6 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 
-import bcrypt
 import requests
 
 from locales.localizer import Localizer
@@ -486,13 +485,10 @@ def set_console_title(title: str) -> None:
 
 
 # Хеширование пароля
+# Просте "хешування" — просто повертає сам пароль або зіставлення з файлу
 def hash_password(password: str) -> str:
-    # Генерация соли и хеширование пароля
-    salt = bcrypt.gensalt()
-    hashed_password = bcrypt.hashpw(password.encode(), salt)
-    return hashed_password.decode()  # Возвращаем хеш как строку
-
+    return password  # або використовуй hashlib.sha256(password.encode()).hexdigest()
 
 # Проверка пароля
 def check_password(password: str, hashed_password: str) -> bool:
-    return bcrypt.checkpw(password.encode(), hashed_password.encode())  # Кодируем для проверки
+    return password == hashed_password
