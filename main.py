@@ -2,20 +2,6 @@ import time
 from pip._internal.cli.main import main
 
 # todo убрать когда-то
-while True:
-    try:
-        import lxml
-
-        break
-    except ModuleNotFoundError:
-        main(["install", "-U", "lxml>=5.3.0"])
-while True:
-    try:
-        import bcrypt
-
-        break
-    except ModuleNotFoundError:
-        main(["install", "-U", "bcrypt>=4.2.0"])
 import Utils.cardinal_tools
 import Utils.config_loader as cfg_loader
 from first_setup import first_setup
